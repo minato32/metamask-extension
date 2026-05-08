@@ -369,19 +369,36 @@ export class TronNode {
     })) as {
       contract_address?: string;
       txID?: string;
+      raw_data?: {
+        contract?: {
+          parameter?: {
+            value?: {
+              contract_address?: string;
+              new_contract?: {
+                contract_address?: string;
+              };
+            };
+          };
+        }[];
+      };
     };
     await this.signAndBroadcastTransaction(tx, fundingAccount.privateKey);
 
-    const address =
-      tx.contract_address && normalizeTronHexAddress(tx.contract_address)
-        ? hexAddressToBase58(normalizeTronHexAddress(tx.contract_address))
-        : getContractAddressFromTx(fundingAccount.address, tx.txID ?? '');
+    const txContractValue = tx.raw_data?.contract?.[0]?.parameter?.value;
+    const contractAddress =
+      tx.contract_address ??
+      txContractValue?.new_contract?.contract_address ??
+      txContractValue?.contract_address;
+    const address = contractAddress
+      ? hexAddressToBase58(normalizeTronHexAddress(contractAddress))
+      : getContractAddressFromTx(fundingAccount.address, tx.txID ?? '');
     const token = {
       ...metadata,
       address,
       hexAddress: base58AddressToHex(address),
       symbol,
     };
+    await this.waitForContract(token);
     this.trc20Tokens[symbol] = token;
 
     return token;
@@ -407,6 +424,8 @@ export class TronNode {
    * the address is not in that map the call throws — add the BIP44-derived key
    * (`m/44'/195'/0'/0/<index>` from `E2E_SRP`) to `E2E_TEST_ACCOUNT_PRIVATE_KEYS`
    * in node.ts before calling this method with a new test address.
+   * @param targetAddress
+   * @param amountInSun
    */
   async freezeBalanceV2(
     targetAddress: string,
@@ -611,6 +630,38 @@ export class TronNode {
       await new Promise((r) => setTimeout(r, 500));
     }
     throw new Error(`Transaction ${txId} was not confirmed within 30s`);
+  }
+
+  private async waitForContract(token: TronTrc20Token): Promise<void> {
+    const deadline = Date.now() + 30_000;
+    const requests = [
+      { value: token.address, visible: true },
+      { value: token.hexAddress, visible: false },
+    ];
+
+    while (Date.now() < deadline) {
+      for (const request of requests) {
+        try {
+          const contract = (await this.fetchJson('/wallet/getcontract', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(request),
+            timeoutMs: 5_000,
+          })) as Record<string, unknown>;
+          if (
+            !contract.Error &&
+            (contract.contract_address || contract.abi || contract.bytecode)
+          ) {
+            return;
+          }
+        } catch {
+          // The contract is not indexed yet for this address representation.
+        }
+      }
+      await new Promise((r) => setTimeout(r, 500));
+    }
+
+    throw new Error(`Contract ${token.address} was not available within 30s`);
   }
 
   async getFundingAccount(): Promise<TronFundingAccount> {

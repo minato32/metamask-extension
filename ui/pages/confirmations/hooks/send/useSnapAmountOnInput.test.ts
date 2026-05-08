@@ -30,6 +30,8 @@ const MOCK_ASSET = {
   isNative: true,
 };
 
+const MOCK_RECIPIENT = 'TQCLD52qQXMmQGmS6U2YC5rBS6B9d3oZAw';
+
 describe('useSnapAmountOnInput', () => {
   let validateAmountMultichainMock: jest.SpyInstance;
 
@@ -47,6 +49,7 @@ describe('useSnapAmountOnInput', () => {
     jest.spyOn(SendContext, 'useSendContext').mockReturnValue({
       asset: MOCK_ASSET,
       fromAccount: MOCK_ACCOUNT,
+      to: MOCK_RECIPIENT,
       value: '1.5',
     } as unknown as SendContext.SendContextType);
 
@@ -60,6 +63,7 @@ describe('useSnapAmountOnInput', () => {
     jest.spyOn(SendContext, 'useSendContext').mockReturnValue({
       asset: MOCK_ASSET,
       fromAccount: MOCK_ACCOUNT,
+      to: MOCK_RECIPIENT,
       value: '1.5',
     } as unknown as SendContext.SendContextType);
 
@@ -70,6 +74,7 @@ describe('useSnapAmountOnInput', () => {
       value: '2.5',
       accountId: MOCK_ACCOUNT.id,
       assetId: MOCK_ASSET.assetId,
+      toAddress: MOCK_RECIPIENT,
     });
   });
 

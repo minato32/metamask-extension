@@ -21,6 +21,10 @@ jest.mock('@metamask/perps-controller', () => ({
   ),
   formatPercentage: jest.fn((percent: number) => `+${percent.toFixed(2)}%`),
   PRICE_RANGES_UNIVERSAL: [{ threshold: 0, decimals: 2 }],
+  // Mirror the real perps-controller constants used by the rewards adapter
+  // so the test exercises the same multiplication the production code does.
+  BUILDER_FEE_CONFIG: { MaxFeeDecimal: 0.001 },
+  BASIS_POINTS_DIVISOR: 10000,
 }));
 
 const mockCaptureException = jest.fn();
@@ -46,6 +50,7 @@ describe('createPerpsInfrastructure', () => {
   const mockGetStorageItem = jest.fn();
   const mockSetStorageItem = jest.fn();
   const mockRemoveStorageItem = jest.fn();
+  const mockGetPerpsDiscountForAccount = jest.fn();
 
   function getDeps(
     overrides?: Partial<InfrastructureDeps>,
@@ -55,6 +60,7 @@ describe('createPerpsInfrastructure', () => {
       getStorageItem: mockGetStorageItem,
       setStorageItem: mockSetStorageItem,
       removeStorageItem: mockRemoveStorageItem,
+      getPerpsDiscountForAccount: mockGetPerpsDiscountForAccount,
       ...overrides,
     };
   }
@@ -64,6 +70,7 @@ describe('createPerpsInfrastructure', () => {
     mockGetStorageItem.mockReset().mockResolvedValue({});
     mockSetStorageItem.mockReset().mockResolvedValue(undefined);
     mockRemoveStorageItem.mockReset().mockResolvedValue(undefined);
+    mockGetPerpsDiscountForAccount.mockReset().mockResolvedValue(0);
   });
 
   afterEach(() => {
@@ -728,7 +735,33 @@ describe('createPerpsInfrastructure', () => {
   });
 
   describe('rewards', () => {
-    it('returns 0 discount as default stub', async () => {
+    it('delegates to the injected getPerpsDiscountForAccount with the perps base fee', async () => {
+      mockGetPerpsDiscountForAccount.mockResolvedValueOnce(5000);
+      const infrastructure = createPerpsInfrastructure(getDeps());
+      const discount = await infrastructure.rewards.getPerpsDiscountForAccount(
+        'eip155:42161:0x1234',
+      );
+
+      expect(discount).toBe(5000);
+      // Base fee bips comes from the perps package constants
+      // (BUILDER_FEE_CONFIG.MaxFeeDecimal * BASIS_POINTS_DIVISOR = 0.001 * 10000 = 10).
+      expect(mockGetPerpsDiscountForAccount).toHaveBeenCalledWith(
+        'eip155:42161:0x1234',
+        10,
+      );
+    });
+
+    it('returns 0 when the injected getPerpsDiscountForAccount throws', async () => {
+      mockGetPerpsDiscountForAccount.mockRejectedValueOnce(new Error('boom'));
+      const infrastructure = createPerpsInfrastructure(getDeps());
+      const discount = await infrastructure.rewards.getPerpsDiscountForAccount(
+        'eip155:42161:0x1234',
+      );
+      expect(discount).toBe(0);
+    });
+
+    it('collapses a null discount to 0 so the core perps-controller never sees null', async () => {
+      mockGetPerpsDiscountForAccount.mockResolvedValueOnce(null);
       const infrastructure = createPerpsInfrastructure(getDeps());
       const discount = await infrastructure.rewards.getPerpsDiscountForAccount(
         'eip155:42161:0x1234',

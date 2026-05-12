@@ -25,6 +25,10 @@ import type {
   FiatRangeConfig,
 } from '@metamask/perps-controller';
 import {
+  BASIS_POINTS_DIVISOR,
+  BUILDER_FEE_CONFIG,
+} from '@metamask/perps-controller';
+import {
   formatPerpsFiat,
   formatPercentage,
   formatVolume,
@@ -57,6 +61,18 @@ export type InfrastructureDeps = {
    * failures.
    */
   isDisconnecting?: () => boolean;
+  /**
+   * Bridge to {@link RewardsController.getPerpsDiscountForAccount}. The
+   * rewards controller owns the fee-discount logic; perps just supplies the
+   * account and its own base fee in bips. The controller returns null when
+   * the discount is currently unknowable (unhydrated cache, fetch error, no
+   * subscription); this adapter collapses null to 0 before returning to the
+   * core perps-controller, which expects a numeric discount.
+   */
+  getPerpsDiscountForAccount: (
+    caipAccountId: `${string}:${string}:${string}`,
+    baseFeeBips: number,
+  ) => Promise<number | null>;
 };
 
 const debugLog = createProjectLogger('perps');
@@ -354,11 +370,28 @@ export function createPerpsInfrastructure(
     cacheInvalidator: createCacheInvalidator(),
     diskCache: createDiskCache(deps),
     rewards: {
+      // The perps package only passes `caipAccountId`; the rewards controller
+      // additionally needs the perps MetaMask builder base fee in bips so it
+      // can convert the absolute reward fee into a discount fraction. We
+      // source the base fee from the perps package's own constants here so
+      // the rewards controller stays a pure transformer.
       getPerpsDiscountForAccount: async (
-        _caipAccountId: `${string}:${string}:${string}`,
+        caipAccountId: `${string}:${string}:${string}`,
       ) => {
-        // TODO: Wire to RewardsController when available
-        return 0;
+        try {
+          const result = await deps.getPerpsDiscountForAccount(
+            caipAccountId,
+            BUILDER_FEE_CONFIG.MaxFeeDecimal * BASIS_POINTS_DIVISOR,
+          );
+          // The rewards controller returns null when the discount is
+          // currently unknowable; treat it the same as a thrown error so
+          // the core perps-controller (which expects a number) sees a
+          // safe "no discount" fallback.
+          return result ?? 0;
+        } catch {
+          // Never let a discount lookup failure block a trade — return 0.
+          return 0;
+        }
       },
     },
   };

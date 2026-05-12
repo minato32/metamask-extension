@@ -25,6 +25,31 @@ export type RewardsControllerGetActualSubscriptionIdAction = {
 };
 
 /**
+ * Get perps fee discount for an account.
+ *
+ * When the account's active subscription has VIP enabled, this calls the
+ * authenticated `/vip/fees` endpoint and converts the absolute VIP builder
+ * fee into a discount fraction relative to `baseFeeBips`. Non-VIP accounts
+ * receive no discount.
+ *
+ * @param account - The account address in CAIP-10 format
+ * @param baseFeeBips - The perps MetaMask builder base fee in basis points
+ * that the caller would apply absent any discount. Used to convert the VIP
+ * absolute fee into a discount fraction (caller owns the source of truth
+ * for the base fee; the controller is a pure transformer).
+ * @returns Promise<number | null> - Discount in basis points (0-10000), or
+ * null when the discount is currently unknowable (rewards disabled, no
+ * subscription, unhydrated cache, fetch error). Callers should treat null
+ * as "no discount available yet" — skip caching and retry next call. A
+ * literal 0 means "no discount applies — safe to cache" (non-VIP
+ * subscription, out-of-range bips).
+ */
+export type RewardsControllerGetPerpsDiscountForAccountAction = {
+  type: `RewardsController:getPerpsDiscountForAccount`;
+  handler: RewardsController['getPerpsDiscountForAccount'];
+};
+
+/**
  * Check if an internal account supports opt-in for rewards.
  *
  * @param account - The internal account to check
@@ -174,6 +199,7 @@ export type RewardsControllerLinkAccountsToSubscriptionCandidateAction = {
 export type RewardsControllerMethodActions =
   | RewardsControllerResetStateAction
   | RewardsControllerGetActualSubscriptionIdAction
+  | RewardsControllerGetPerpsDiscountForAccountAction
   | RewardsControllerIsOptInSupportedAction
   | RewardsControllerGetHasAccountOptedInAction
   | RewardsControllerGetOptInStatusAction

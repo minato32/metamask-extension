@@ -1,11 +1,11 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { toChecksumHexAddress } from '@metamask/controller-utils';
+import { getSelectedInternalAccount } from '../../../shared/lib/selectors/accounts';
+import { getCurrentChainId } from '../../../shared/lib/selectors/networks';
 import {
   clearPerpsFeeDiscountCacheForTests,
   usePerpsMetamaskFeeDiscountBips,
 } from './usePerpsMetamaskFeeDiscountBips';
-import { getSelectedInternalAccount } from '../../../shared/lib/selectors/accounts';
-import { getCurrentChainId } from '../../../shared/lib/selectors/networks';
 
 const mockSubmitRequestToBackground = jest.fn();
 jest.mock('../../store/background-connection', () => ({
@@ -62,9 +62,7 @@ describe('usePerpsMetamaskFeeDiscountBips', () => {
   });
 
   it('returns undefined while the discount lookup is in flight', () => {
-    mockSubmitRequestToBackground.mockReturnValue(
-      new Promise(() => undefined),
-    );
+    mockSubmitRequestToBackground.mockReturnValue(new Promise(() => undefined));
     const { result } = renderHook(() =>
       usePerpsMetamaskFeeDiscountBips(ORIGINAL_METAMASK_FEE_BIPS),
     );

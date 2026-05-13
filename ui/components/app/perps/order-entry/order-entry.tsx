@@ -397,7 +397,9 @@ export const OrderEntry: React.FC<OrderEntryProps> = ({
             marginRequired={calculations.marginRequired}
             estimatedFees={calculations.estimatedFees}
             liquidationPrice={calculations.liquidationPrice}
-            metamaskFeeRateDiscountPercentage={metamaskFeeRateDiscountPercentage}
+            metamaskFeeRateDiscountPercentage={
+              metamaskFeeRateDiscountPercentage
+            }
           />
         )}
       </Box>

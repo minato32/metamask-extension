@@ -15,7 +15,10 @@ describe('PerpsFeesDisplay', () => {
 
     it('hides the discount badge when metamaskFeeRateDiscountPercentage is zero', () => {
       render(
-        <PerpsFeesDisplay formatFeeText="$10.00" metamaskFeeRateDiscountPercentage={0} />,
+        <PerpsFeesDisplay
+          formatFeeText="$10.00"
+          metamaskFeeRateDiscountPercentage={0}
+        />,
       );
 
       expect(
@@ -25,7 +28,10 @@ describe('PerpsFeesDisplay', () => {
 
     it('hides the discount badge when metamaskFeeRateDiscountPercentage is negative', () => {
       render(
-        <PerpsFeesDisplay formatFeeText="$10.00" metamaskFeeRateDiscountPercentage={-5} />,
+        <PerpsFeesDisplay
+          formatFeeText="$10.00"
+          metamaskFeeRateDiscountPercentage={-5}
+        />,
       );
 
       expect(
@@ -35,7 +41,10 @@ describe('PerpsFeesDisplay', () => {
 
     it('renders the discount badge when metamaskFeeRateDiscountPercentage is positive', () => {
       render(
-        <PerpsFeesDisplay formatFeeText="$10.00" metamaskFeeRateDiscountPercentage={15} />,
+        <PerpsFeesDisplay
+          formatFeeText="$10.00"
+          metamaskFeeRateDiscountPercentage={15}
+        />,
       );
 
       expect(
@@ -67,7 +76,10 @@ describe('PerpsFeesDisplay', () => {
 
     it('renders both fee text and discount when both are present', () => {
       render(
-        <PerpsFeesDisplay formatFeeText="$100.00" metamaskFeeRateDiscountPercentage={20} />,
+        <PerpsFeesDisplay
+          formatFeeText="$100.00"
+          metamaskFeeRateDiscountPercentage={20}
+        />,
       );
 
       expect(screen.getByText('$100.00')).toBeInTheDocument();

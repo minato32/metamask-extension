@@ -68,7 +68,8 @@ export const PerpsFeesDisplay: React.FC<PerpsFeesDisplayProps> = ({
     alignItems={BoxAlignItems.Center}
     gap={1}
   >
-    {metamaskFeeRateDiscountPercentage !== undefined && metamaskFeeRateDiscountPercentage > 0 ? (
+    {metamaskFeeRateDiscountPercentage !== undefined &&
+    metamaskFeeRateDiscountPercentage > 0 ? (
       <Box
         flexDirection={BoxFlexDirection.Row}
         alignItems={BoxAlignItems.Center}

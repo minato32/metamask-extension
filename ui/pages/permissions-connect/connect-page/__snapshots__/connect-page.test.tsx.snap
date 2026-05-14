@@ -3,11 +3,11 @@
 exports[`ConnectPage should render correctly 1`] = `
 <div>
   <div
-    class="mm-box multichain-page multichain-page--has-app-header mm-box--display-flex mm-box--flex-direction-row mm-box--justify-content-center mm-box--width-full mm-box--height-full mm-box--background-color-background-default"
+    class="flex flex-row justify-center bg-default multichain-page multichain-page--has-app-header w-full h-full"
     data-testid="multichain-page"
   >
     <div
-      class="mm-box multichain-page__inner-container main-container connect-page mm-box--display-flex mm-box--flex-direction-column mm-box--width-full mm-box--height-full mm-box--background-color-background-default"
+      class="flex flex-col background-default multichain-page__inner-container w-full h-full main-container connect-page"
       data-testid="connect-page"
     >
       <div
@@ -55,7 +55,7 @@ exports[`ConnectPage should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="mm-box multichain-page-content mm-box--padding-4 mm-box--padding-top-0 mm-box--padding-right-4 mm-box--padding-left-4 mm-box--display-flex mm-box--flex-direction-column mm-box--width-full mm-box--height-full mm-box--background-color-transparent"
+        class="flex flex-col p-4 pt-0 pr-4 pl-4 transparent multichain-page-content w-full h-full"
         style="overflow: auto;"
       >
         <div
@@ -109,8 +109,9 @@ exports[`ConnectPage should render correctly 1`] = `
                       data-testid="account-list-item-badge"
                     >
                       <button
-                        class="mm-box multichain-badge-status pr-1 mm-box--display-flex mm-box--justify-content-center mm-box--align-items-center mm-box--background-color-transparent"
+                        class="flex flex-row items-center justify-center multichain-badge-status pr-1 bg-transparent"
                         data-testid="multichain-badge-status"
+                        type="button"
                       >
                         <div
                           class="mm-box mm-badge-wrapper mm-box--display-inline-block"
@@ -283,14 +284,14 @@ exports[`ConnectPage should render correctly 1`] = `
                                 tabindex="0"
                               >
                                 <div
-                                  class="mm-box multichain-avatar-group mm-box--display-flex mm-box--gap-1 mm-box--align-items-center"
+                                  class="flex flex-row gap-1 items-center multichain-avatar-group"
                                   data-testid="avatar-group"
                                 >
                                   <div
-                                    class="mm-box mm-box--display-flex mm-box--align-items-center"
+                                    class="flex flex-row items-center"
                                   >
                                     <div
-                                      class="mm-box mm-box--rounded-full"
+                                      class="rounded-full"
                                       style="margin-left: 0px;"
                                     >
                                       <div
@@ -304,7 +305,7 @@ exports[`ConnectPage should render correctly 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="mm-box mm-box--rounded-full"
+                                      class="rounded-full"
                                       style="margin-left: -8px;"
                                     >
                                       <div
@@ -318,7 +319,7 @@ exports[`ConnectPage should render correctly 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="mm-box mm-box--rounded-full"
+                                      class="rounded-full"
                                       style="margin-left: -8px;"
                                     >
                                       <div
@@ -328,7 +329,7 @@ exports[`ConnectPage should render correctly 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="mm-box mm-box--rounded-full"
+                                      class="rounded-full"
                                       style="margin-left: -8px;"
                                     >
                                       <div
@@ -343,7 +344,7 @@ exports[`ConnectPage should render correctly 1`] = `
                                     </div>
                                   </div>
                                   <div
-                                    class="mm-box"
+                                    class=""
                                   >
                                     <p
                                       class="mm-box mm-text mm-text--body-sm mm-box--color-text-alternative"
@@ -379,7 +380,7 @@ exports[`ConnectPage should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="mm-box multichain-page-footer mm-box--padding-4 mm-box--display-flex mm-box--gap-4 mm-box--width-full"
+        class="flex flex-row gap-4 p-4 multichain-page-footer w-full"
       >
         <div
           class="mm-box mm-box--display-flex mm-box--gap-4 mm-box--flex-direction-column mm-box--width-full"
@@ -410,11 +411,11 @@ exports[`ConnectPage should render correctly 1`] = `
 exports[`ConnectPage should render with defaults from the requested permissions 1`] = `
 <div>
   <div
-    class="mm-box multichain-page multichain-page--has-app-header mm-box--display-flex mm-box--flex-direction-row mm-box--justify-content-center mm-box--width-full mm-box--height-full mm-box--background-color-background-default"
+    class="flex flex-row justify-center bg-default multichain-page multichain-page--has-app-header w-full h-full"
     data-testid="multichain-page"
   >
     <div
-      class="mm-box multichain-page__inner-container main-container connect-page mm-box--display-flex mm-box--flex-direction-column mm-box--width-full mm-box--height-full mm-box--background-color-background-default"
+      class="flex flex-col background-default multichain-page__inner-container w-full h-full main-container connect-page"
       data-testid="connect-page"
     >
       <div
@@ -462,7 +463,7 @@ exports[`ConnectPage should render with defaults from the requested permissions 
         </div>
       </div>
       <div
-        class="mm-box multichain-page-content mm-box--padding-4 mm-box--padding-top-0 mm-box--padding-right-4 mm-box--padding-left-4 mm-box--display-flex mm-box--flex-direction-column mm-box--width-full mm-box--height-full mm-box--background-color-transparent"
+        class="flex flex-col p-4 pt-0 pr-4 pl-4 transparent multichain-page-content w-full h-full"
         style="overflow: auto;"
       >
         <div
@@ -516,8 +517,9 @@ exports[`ConnectPage should render with defaults from the requested permissions 
                       data-testid="account-list-item-badge"
                     >
                       <button
-                        class="mm-box multichain-badge-status pr-1 mm-box--display-flex mm-box--justify-content-center mm-box--align-items-center mm-box--background-color-transparent"
+                        class="flex flex-row items-center justify-center multichain-badge-status pr-1 bg-transparent"
                         data-testid="multichain-badge-status"
+                        type="button"
                       >
                         <div
                           class="mm-box mm-badge-wrapper mm-box--display-inline-block"
@@ -690,14 +692,14 @@ exports[`ConnectPage should render with defaults from the requested permissions 
                                 tabindex="0"
                               >
                                 <div
-                                  class="mm-box multichain-avatar-group mm-box--display-flex mm-box--gap-1 mm-box--align-items-center"
+                                  class="flex flex-row gap-1 items-center multichain-avatar-group"
                                   data-testid="avatar-group"
                                 >
                                   <div
-                                    class="mm-box mm-box--display-flex mm-box--align-items-center"
+                                    class="flex flex-row items-center"
                                   >
                                     <div
-                                      class="mm-box mm-box--rounded-full"
+                                      class="rounded-full"
                                       style="margin-left: 0px;"
                                     >
                                       <div
@@ -711,7 +713,7 @@ exports[`ConnectPage should render with defaults from the requested permissions 
                                       </div>
                                     </div>
                                     <div
-                                      class="mm-box mm-box--rounded-full"
+                                      class="rounded-full"
                                       style="margin-left: -8px;"
                                     >
                                       <div
@@ -725,7 +727,7 @@ exports[`ConnectPage should render with defaults from the requested permissions 
                                       </div>
                                     </div>
                                     <div
-                                      class="mm-box mm-box--rounded-full"
+                                      class="rounded-full"
                                       style="margin-left: -8px;"
                                     >
                                       <div
@@ -735,7 +737,7 @@ exports[`ConnectPage should render with defaults from the requested permissions 
                                       </div>
                                     </div>
                                     <div
-                                      class="mm-box mm-box--rounded-full"
+                                      class="rounded-full"
                                       style="margin-left: -8px;"
                                     >
                                       <div
@@ -750,7 +752,7 @@ exports[`ConnectPage should render with defaults from the requested permissions 
                                     </div>
                                   </div>
                                   <div
-                                    class="mm-box"
+                                    class=""
                                   >
                                     <p
                                       class="mm-box mm-text mm-text--body-sm mm-box--color-text-alternative"
@@ -786,7 +788,7 @@ exports[`ConnectPage should render with defaults from the requested permissions 
         </div>
       </div>
       <div
-        class="mm-box multichain-page-footer mm-box--padding-4 mm-box--display-flex mm-box--gap-4 mm-box--width-full"
+        class="flex flex-row gap-4 p-4 multichain-page-footer w-full"
       >
         <div
           class="mm-box mm-box--display-flex mm-box--gap-4 mm-box--flex-direction-column mm-box--width-full"

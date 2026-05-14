@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '../../component-library';
+import { Box } from '@metamask/design-system-react';
 import { AddressListItem } from '.';
 
 const LABEL = 'metamask.eth';

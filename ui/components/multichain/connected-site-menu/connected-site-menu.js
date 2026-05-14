@@ -2,36 +2,39 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
 import {
-  AlignItems,
-  BackgroundColor,
-  BorderRadius,
-  Display,
-  IconColor,
-  JustifyContent,
-} from '../../../helpers/constants/design-system';
-import { Box, Icon, IconName, IconSize } from '../../component-library';
+  Box,
+  BoxAlignItems,
+  BoxBackgroundColor,
+  BoxFlexDirection,
+  BoxJustifyContent,
+} from '@metamask/design-system-react';
+import { IconColor } from '../../../helpers/constants/design-system';
+import { Icon, IconName, IconSize } from '../../component-library';
 
 export const ConnectedSiteMenu = ({ className, disabled, onClick }) => {
   return (
     <Box
-      className={classNames(
-        `multichain-connected-site-menu${disabled ? '--disabled' : ''}`,
-        className,
-      )}
-      data-testid="connection-menu"
-      as="button"
-      display={Display.Flex}
-      alignItems={AlignItems.center}
-      justifyContent={JustifyContent.center}
-      backgroundColor={BackgroundColor.backgroundDefault}
-      onClick={onClick}
-      borderRadius={BorderRadius.LG}
+      asChild
+      flexDirection={BoxFlexDirection.Row}
+      alignItems={BoxAlignItems.Center}
+      justifyContent={BoxJustifyContent.Center}
+      backgroundColor={BoxBackgroundColor.BackgroundDefault}
     >
-      <Icon
-        name={IconName.Global}
-        size={IconSize.Lg}
-        color={IconColor.iconDefault}
-      />
+      <button
+        type="button"
+        className={classNames(
+          `multichain-connected-site-menu rounded-lg${disabled ? '--disabled' : ''}`,
+          className,
+        )}
+        data-testid="connection-menu"
+        onClick={onClick}
+      >
+        <Icon
+          name={IconName.Global}
+          size={IconSize.Lg}
+          color={IconColor.iconDefault}
+        />
+      </button>
     </Box>
   );
 };

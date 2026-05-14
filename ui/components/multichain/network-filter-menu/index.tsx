@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
+import { Box, BoxJustifyContent } from '@metamask/design-system-react';
 import { IconName } from '../../component-library/icon';
 import {
   BackgroundColor,
-  JustifyContent,
   TextColor,
 } from '../../../helpers/constants/design-system';
 import {
@@ -10,7 +10,6 @@ import {
   ButtonBaseSize,
 } from '../../component-library/button-base';
 import { Popover, PopoverPosition } from '../../component-library/popover';
-import { Box } from '../../component-library';
 import { FEATURED_NETWORK_CHAIN_IDS } from '../../../../shared/constants/network';
 import NetworkFilter from '../../app/assets/asset-list/network-filter';
 import { useI18nContext } from '../../../hooks/useI18nContext';
@@ -43,7 +42,7 @@ export const NetworkFilterComponent = ({
       marginLeft={2}
       marginRight={2}
       justifyContent={
-        isFullScreen ? JustifyContent.flexStart : JustifyContent.spaceBetween
+        isFullScreen ? BoxJustifyContent.Start : BoxJustifyContent.Between
       }
       ref={popoverRef}
     >

@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { CaipAccountId, CaipChainId } from '@metamask/utils';
-import { AvatarAccountSize } from '@metamask/design-system-react';
 import {
-  BackgroundColor,
-  BorderRadius,
-} from '../../../../../helpers/constants/design-system';
+  AvatarAccountSize,
+  Box,
+  BoxBackgroundColor,
+} from '@metamask/design-system-react';
 import { useI18nContext } from '../../../../../hooks/useI18nContext';
-import { Box, IconName } from '../../../../component-library';
+import { IconName } from '../../../../component-library';
 import { PreferredAvatar } from '../../../../app/preferred-avatar';
 import { EditAccountsModal, EditNetworksModal } from '../../..';
 import { MergedInternalAccountWithCaipAccountId } from '../../../../../selectors/selectors.types';
@@ -121,8 +121,8 @@ export const SiteCell: React.FC<SiteCellProps> = ({
       <Box
         padding={4}
         gap={4}
-        backgroundColor={BackgroundColor.backgroundDefault}
-        borderRadius={BorderRadius.LG}
+        backgroundColor={BoxBackgroundColor.BackgroundDefault}
+        className="rounded-lg"
       >
         <SiteCellConnectionListItem
           title={t('accountsPermissionsTitle')}

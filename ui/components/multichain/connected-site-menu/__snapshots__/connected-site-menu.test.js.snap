@@ -3,8 +3,9 @@
 exports[`Connected Site Menu should render the site menu in connected state 1`] = `
 <div>
   <button
-    class="mm-box multichain-connected-site-menu mm-box--display-flex mm-box--justify-content-center mm-box--align-items-center mm-box--background-color-background-default mm-box--rounded-lg"
+    class="flex flex-row items-center justify-center bg-default multichain-connected-site-menu rounded-lg"
     data-testid="connection-menu"
+    type="button"
   >
     <span
       class="mm-box mm-icon mm-icon--size-lg mm-box--display-inline-block mm-box--color-icon-default"
@@ -17,8 +18,9 @@ exports[`Connected Site Menu should render the site menu in connected state 1`] 
 exports[`Connected Site Menu should render the site menu in not connected state 1`] = `
 <div>
   <button
-    class="mm-box multichain-connected-site-menu mm-box--display-flex mm-box--justify-content-center mm-box--align-items-center mm-box--background-color-background-default mm-box--rounded-lg"
+    class="flex flex-row items-center justify-center bg-default multichain-connected-site-menu rounded-lg"
     data-testid="connection-menu"
+    type="button"
   >
     <span
       class="mm-box mm-icon mm-icon--size-lg mm-box--display-inline-block mm-box--color-icon-default"
@@ -31,8 +33,9 @@ exports[`Connected Site Menu should render the site menu in not connected state 
 exports[`Connected Site Menu should render the site menu in not connected to current account state 1`] = `
 <div>
   <button
-    class="mm-box multichain-connected-site-menu mm-box--display-flex mm-box--justify-content-center mm-box--align-items-center mm-box--background-color-background-default mm-box--rounded-lg"
+    class="flex flex-row items-center justify-center bg-default multichain-connected-site-menu rounded-lg"
     data-testid="connection-menu"
+    type="button"
   >
     <span
       class="mm-box mm-icon mm-icon--size-lg mm-box--display-inline-block mm-box--color-icon-default"

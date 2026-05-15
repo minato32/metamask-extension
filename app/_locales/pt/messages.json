@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "Necessário mais $1 para gás"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "Esta rede específica exige que você mantenha uma reserva de $1 a $3 em sua conta. Com seu saldo atual, você pode usar no máximo $2 a $3",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "É necessário um saldo mínimo de reserva de $1",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "Ocorreu uma falha na estimativa do preço do gás devido a um erro na rede."
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "O patrocínio de gás não está disponível para esta transação. Você precisará manter pelo menos $1 $2 em sua conta.",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 h",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "Encerrar posição long"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "Fechamentos parciais devem ter um valor mínimo de $1 em USD. Aumente o valor do fechamento ou feche a posição completa."
-  },
   "perpsClosePosition": {
     "message": "Encerrar posição"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "Adicionando fundos aos Perps"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "Seus fundos estão prontos para negociar."
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "Fundos adicionados aos Perps"
   },
   "perpsDeposits": {
     "message": "Depósitos"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "Classificar por"
-  },
-  "perpsSortByTitle": {
-    "message": "Classificar"
   },
   "perpsSortByVolume": {
     "message": "Volume"

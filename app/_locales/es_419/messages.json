@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "Se necesita más $1 para gas"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "Esta red específica requiere mantener una reserva de $1 $3 en tu cuenta. Con tu saldo actual, puedes usar un máximo de $2 $3",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "Se requiere un saldo mínimo de reserva de $1",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "Se produjo un error al calcular el precio del gas debido a una falla en la red."
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "El patrocinio de gas no está disponible para esta transacción. Deberás mantener al menos $1 $2 en tu cuenta.",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 horas",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "Cerrar posición larga"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "Los cierres parciales deben tener un valor mínimo de $1 USD. Aumenta el monto del cierre o cierra la posición completa."
-  },
   "perpsClosePosition": {
     "message": "Cerrar posición"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "Añadir fondos a contratos perpetuos"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "Tus fondos están listos para operar."
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "Fondos agregados a Perps"
   },
   "perpsDeposits": {
     "message": "Depósitos"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "Ordenar por"
-  },
-  "perpsSortByTitle": {
-    "message": "Clasificar"
   },
   "perpsSortByVolume": {
     "message": "Volumen"

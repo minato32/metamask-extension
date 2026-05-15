@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "Gaz için daha fazla $1 gerekli"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "Bu ağ için hesabınızda minimum $1 $3 rezerv bulundurulması gerekiyor. Güncel bakiyenizle maksimum $2 $3 kullanabilirsiniz",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "Minimum $1 reserv bakiyesi gerekli",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "Gaz fiyatı tahmini ağ hatası nedeniyle başarısız oldu."
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "Gaz sponsorluğu bu işlem için kullanılamıyor. Hesabınızda en az $1 $2 tutmanız gerekecek.",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 sa.",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "Long pozisyonu kapat"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "Kısmi kapatma işlemleri en az $1 USD değerinde olmalıdır. Kapatma tutarını artırın veya pozisyonun tamamını kapatın."
-  },
   "perpsClosePosition": {
     "message": "Pozisyonu kapat"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "Sürekli Vadeli İşlem Sözleşmelerine fon ekleniyor"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "Fonlarınız işleme hazır."
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "Fonlar Perps'e eklendi"
   },
   "perpsDeposits": {
     "message": "Yatırma İşlemleri"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "Şuna göre sırala"
-  },
-  "perpsSortByTitle": {
-    "message": "Sırala"
   },
   "perpsSortByVolume": {
     "message": "Hacim"

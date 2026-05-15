@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "가스비를 위해 더 많은 $1 필요"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "이 특정 네트워크는 계정에 최소 $1 $3의 예치금을 유지해야 합니다. 현재 잔액으로는 최대 $2 $3까지 사용할 수 있습니다",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "최소 $1의 예치금이 필요합니다",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "네트워크 오류로 인해 가스 가격 견적 추산을 실패했습니다."
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "이 트랜잭션에는 가스 후원이 제공되지 않습니다. 계정에 최소 $1 $2의 잔고를 유지해야 합니다.",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 시간",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "롱 청산"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "부분 종료는 USD 기준 최소 $1 이상이어야 합니다. 종료 금액을 늘리거나 전체 포지션을 종료하세요."
-  },
   "perpsClosePosition": {
     "message": "포지션 종료"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "무기한 선물에 자금 추가 중"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "자금을 거래에 사용할 준비가 되었습니다."
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "무기한 선물에 자금 추가됨"
   },
   "perpsDeposits": {
     "message": "예치"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "정렬 기준"
-  },
-  "perpsSortByTitle": {
-    "message": "정렬"
   },
   "perpsSortByVolume": {
     "message": "거래량"

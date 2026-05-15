@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "Χρειάζονται περισσότερα $1 για τέλη"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "Αυτό το συγκεκριμένο δίκτυο απαιτεί να διατηρείτε ένα υπόλοιπο ασφαλείας $1 $3 στον λογαριασμό σας. Με το τρέχον υπόλοιπό σας μπορείτε να χρησιμοποιήσετε το πολύ $2 $3",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "Απαιτείται ελάχιστο υπόλοιπο ασφαλείας $1",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "Η εκτίμηση της τιμής του τέλους συναλλαγής απέτυχε λόγω σφάλματος δικτύου."
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "Η κάλυψη των τελών δεν είναι διαθέσιμη για αυτή τη συναλλαγή. Θα πρέπει να διατηρείτε τουλάχιστον $1 $2 στον λογαριασμό σας.",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 ώρες",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "Κλείσιμο θέσης αγοράς"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "Τα μερικά κλεισίματα πρέπει να είναι τουλάχιστον $1 σε αξία USD. Αυξήστε το ποσό κλεισίματος ή κλείστε ολόκληρη τη θέση."
-  },
   "perpsClosePosition": {
     "message": "Κλείσιμο θέσης"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "Προσθήκη κεφαλαίων για συμβόλαια αορίστου διάρκειας (perps)"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "Τα χρήματά σας είναι έτοιμα για συναλλαγές."
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "Τα χρήματα προστέθηκαν στα Perps"
   },
   "perpsDeposits": {
     "message": "Καταθέσεις"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "Ταξινόμηση κατά"
-  },
-  "perpsSortByTitle": {
-    "message": "Ταξινόμηση"
   },
   "perpsSortByVolume": {
     "message": "Όγκος"

@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "Для оплаты газа нужно еще $1"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "Эта конкретная сеть требует поддерживать резерв в размере $1 $3 на вашем счете. При вашем текущем балансе вы можете использовать максимум $2 $3",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "Требуется минимальный резервный баланс в размере $1",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "Не удалось определить примерную цену газа из-за ошибки сети."
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "Для этой транзакции недоступна спонсорская оплата газа. Вам необходимо постоянно иметь на счету не менее $1 $2.",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 ч",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "Закрыть длинную"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "Частичные закрытия должны быть на сумму не менее $1 в долл. США. Увеличьте сумму закрытия или закройте позицию полностью."
-  },
   "perpsClosePosition": {
     "message": "Закрыть позицию"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "Добавление средств в Перпы"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "Ваши средства готовы к торговле."
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "Средства добавлены в перпы"
   },
   "perpsDeposits": {
     "message": "Депозиты"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "Сортировать по"
-  },
-  "perpsSortByTitle": {
-    "message": "Сортировать"
   },
   "perpsSortByVolume": {
     "message": "Объем"

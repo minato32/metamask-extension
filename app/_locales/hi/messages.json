@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "गैस के लिए अधिक $1 की आवश्यकता है"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "इस विशेष नेटवर्क के लिए आपके अकाउंट में $1 $3 का रिज़र्व बनाए रखना आवश्यक है। आपके वर्तमान बैलेंस के साथ, आप अधिकतम $2 $3 तक उपयोग कर सकते हैं",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "न्यूनतम $1 रिज़र्व बैलेंस आवश्यक है",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "गैस प्राइस अनुमान नेटवर्क गड़बड़ी के कारण नहीं हो पाया है।"
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "इस ट्रांसेक्शन के लिए गैस स्पॉन्सरशिप उपलब्ध नहीं है। आपको अपने अकाउंट में कम से कम $1 $2 रखना होगा।",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 घंटे",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "लॉन्ग को क्लोज़ करें"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "आंशिक क्लोज़ की कीमत USD में कम से कम $1 होनी चाहिए। क्लोज़ अमाउंट बढ़ाएँ या पूरी पोज़िशन बंद करें।"
-  },
   "perpsClosePosition": {
     "message": "पोज़िशन बंद करें"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "पर्प्स में फंड्स जोड़े जा रहे हैं"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "आपके फंड्स ट्रेड करने के लिए तैयार हैं।"
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "फंड्स पर्प्स में जोड़े गए"
   },
   "perpsDeposits": {
     "message": "डिपॉज़िट"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "इसके अनुसार क्रमबद्ध करें"
-  },
-  "perpsSortByTitle": {
-    "message": "सॉर्ट करें"
   },
   "perpsSortByVolume": {
     "message": "वॉल्यूम"

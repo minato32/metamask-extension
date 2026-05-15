@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "ガス代により多くの$1が必要です"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "このネットワークは、アカウントに$1 $3の準備金を必要とします。現在の残高では$2 $3までしか使えません",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "$1以上の準備金が必要です",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "ネットワークエラーのため、ガス価格の見積もりに失敗しました。"
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "このトランザクションでガススポンサーシップは利用できません。アカウントに$1 $2以上の残高を残す必要があります。",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1時間",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "ロングをクローズ"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "一部クローズはUSDで$1以上の価値である必要があります。クローズ金額を増やすか、ポジション全体をクローズしてください。"
-  },
   "perpsClosePosition": {
     "message": "ポジションのクローズ"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "パーペチュアルに入金中"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "資金を取引に利用できます。"
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "パーペチュアルに資金が追加されました"
   },
   "perpsDeposits": {
     "message": "デポジット"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "並べ替え基準"
-  },
-  "perpsSortByTitle": {
-    "message": "並べ替え"
   },
   "perpsSortByVolume": {
     "message": "取引量"

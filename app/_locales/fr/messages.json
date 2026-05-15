@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "Vous avez besoin de plus de $1 pour payer les frais de gaz"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "Ce réseau spécifique exige que vous mainteniez une réserve de $1 $3 sur votre compte. Avec votre solde actuel, vous pouvez utiliser $2 $3 au maximum",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "Solde minimum de réserve en $1 requis",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "L’estimation du prix du carburant a échoué en raison d’une erreur de réseau."
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "Le parrainage de gaz n’est pas disponible pour cette transaction. Vous devrez conserver au moins $1 $2 sur votre compte.",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 h",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "Fermer la position longue"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "Les clôtures partielles doivent avoir une valeur d’au moins $1 USD. Augmentez le montant de clôture ou clôturez la position complète."
-  },
   "perpsClosePosition": {
     "message": "Fermer la position"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "Ajouter des fonds à votre compte de trading de contrats à terme perpétuels"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "Vos fonds sont disponibles pour le trading."
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "Fonds ajoutés au compte de trading de contrats à terme perpétuels"
   },
   "perpsDeposits": {
     "message": "Dépôts"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "Trier par"
-  },
-  "perpsSortByTitle": {
-    "message": "Trier"
   },
   "perpsSortByVolume": {
     "message": "Volume"

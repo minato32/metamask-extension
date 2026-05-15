@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "需要更多的 $1 用于燃料"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "此特定网络要求您的账户中保留 $1 $3 的储备金。根据您当前的余额，您最多可使用 $2 $3",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "需要最低 $1 储备金余额",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "由于网络错误，燃料价格估算失败。"
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "本次交易无法使用燃料赞助。您的账户中需要至少保留 $1 $2。",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 小时",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "平仓多头仓位"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "部分平仓的金额至少需要达到 $1 美元。请增加平仓金额或平仓全部仓位。"
-  },
   "perpsClosePosition": {
     "message": "平仓"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "正在为永续合约充值"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "您的资金已可用于交易。"
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "资金已存入永续合约"
   },
   "perpsDeposits": {
     "message": "保证金"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "排序方式"
-  },
-  "perpsSortByTitle": {
-    "message": "排序"
   },
   "perpsSortByVolume": {
     "message": "交易量"

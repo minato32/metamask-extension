@@ -1448,10 +1448,6 @@
   "bridgeValidationInsufficientGasTitle": {
     "message": "Mehr $1 für Gas benötigt"
   },
-  "bridgeValidationInsufficientNativeReserveMessage": {
-    "message": "Dieses spezifische Netzwerk erfordert, dass Sie eine Reserve von $1 $3 auf Ihrem Konto vorhalten. Mit Ihrem aktuellen Saldo können Sie maximal $2 $3 verwenden.",
-    "description": "$1 is the minimum native reserve amount for the network, $2 is the spendable balance, $3 the ticker symbol of the token"
-  },
   "bridgeValidationInsufficientNativeReserveTitle": {
     "message": "Mindest-$1-Reservesaldo ist erforderlich",
     "description": "$1 is the ticker symbol of the token"
@@ -3104,10 +3100,6 @@
   },
   "gasPriceFetchFailed": {
     "message": "Die Berechnung des Gas-Preises ist aufgrund eines Netzwerkfehlers fehlgeschlagen."
-  },
-  "gasSponsorshipReserveBalanceWarning": {
-    "message": "Gas-Sponsoring ist für diese Transaktion nicht verfügbar. Sie benötigen mindestens $1 $2 auf Ihrem Konto.",
-    "description": "$1 is the minimum required balance and $2 is the native currency symbol."
   },
   "gasTimingHoursShort": {
     "message": "$1 Stunden",
@@ -5838,9 +5830,6 @@
   "perpsCloseLong": {
     "message": "Long-Position schließen"
   },
-  "perpsClosePartialMinNotional": {
-    "message": "Teilschließungen müssen einen Mindestwert von $1 in US-Dollar betragen. Erhöhen Sie den Abschlussbetrag oder schließen Sie die gesamte Position."
-  },
   "perpsClosePosition": {
     "message": "Position schließen"
   },
@@ -5894,12 +5883,6 @@
   },
   "perpsDepositToastPendingTitle": {
     "message": "Gelder werden Perps hinzugefügt"
-  },
-  "perpsDepositToastSuccessDescription": {
-    "message": "Ihre Gelder sind zum Handel bereit."
-  },
-  "perpsDepositToastSuccessTitle": {
-    "message": "Gelder wurden Perps zugeführt"
   },
   "perpsDeposits": {
     "message": "Einzahlungen"
@@ -6190,9 +6173,6 @@
   },
   "perpsSortBySection": {
     "message": "Sortieren nach"
-  },
-  "perpsSortByTitle": {
-    "message": "Sortieren"
   },
   "perpsSortByVolume": {
     "message": "Volumen"
